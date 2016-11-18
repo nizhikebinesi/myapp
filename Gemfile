@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
+group :development, :test do
    gem 'mysql2', '>= 0.3.13', '< 0.5'
+end
 group :production do
    gem 'pg'
 end
@@ -38,8 +40,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # Use mysql as the database for Active Record
-   gem 'mysql2', '>= 0.3.13', '< 0.5'
 end
 
 group :development do
